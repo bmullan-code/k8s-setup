@@ -39,6 +39,11 @@ watch kubectl get pods
 Get the vm image names
 ```
 kubectl get virtualmachines
+NAME                                          AGE
+ns1-cluster1-control-plane-dtsvk              2d23h
+ns1-cluster1-workers-9jg77-6b6f9cc77b-2t6wc   2d22h
+ns1-cluster1-workers-9jg77-6b6f9cc77b-pcqh2   2d22h
+ns1-cluster1-workers-9jg77-6b6f9cc77b-r5xdk   2d22h
 
 export VMNAME=ns1-cluster1-control-plane-dtsvk
 export VMIP=$(kubectl -n $NAMESPACE get virtualmachine/$VMNAME -o jsonpath='{.status.vmIp}')
